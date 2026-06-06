@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comece com o SmartCash</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="link-home">Home</a></li>
+            <li><a href="#" id="link-transacoes">Nova Transação</a></li>
+            <li><a href="#" id="id-link-insights">Seus Insights</a></li>
+        </ul>
+    </nav>
+
+    <section id="aba-home">
+        <h1>Bem-vindo ao SmartCash</h1>
+        <p>O SmartCash é uma plataforma de gerenciamento financeiro pessoal que ajuda você a controlar suas finanças de forma simples e eficiente...</p>
+        <p>Para começar, basta navegar pelos links acima.</p>
+    </section>
+
+    <section id="aba-transacoes">
+        <h2>Registrar Movimentação</h2>
+        <p>Adicione suas receitas ou registre suas despesas diárias para atualizar seu saldo.</p>
+        
+        <form id="form-financeiro">
+            <label for="tipo-transacao">Tipo de Transação:</label>
+            <select id="tipo-transacao" required>
+                <option value="entrada">Entrada (Receita)</option>
+                <option value="saida">Saída (Despesa)</option>
+            </select>
+
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" step="0.01" required placeholder="R$ 0,00">
+
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" required placeholder="Ex: Salário, Mercado...">
+
+            <button type="submit">Adicionar Transação</button>
+        </form>
+
+        <div id="config-limite" style="margin-top: 20px;">
+            <label for="limite-orcamento">Defina seu limite de gastos mensal (R$):</label>
+            <input type="number" id="limite-orcamento" step="0.01" placeholder="Ex: 1500.00">
+            <button id="btn-salvar-limite">Salvar Limite</button>
+        </div>
+
+        <h3>Histórico de Transações</h3>
+        <div id="container-extrato">
+            </div>
+    </section>
+
+    <section id="aba-insights">
+        <h2>Seus Insights</h2>
+        <p>Com base nas suas entradas e saídas, o SmartCash irá gerar insights personalizados...</p>
+        
+        <h3>Resumo Mensal</h3>
+        <div class="cards-resumo">
+            <div class="card">Entradas: <span id="total-entradas">R$ 0,00</span></div>
+            <div class="card">Saídas: <span id="total-saidas">R$ 0,00</span></div>
+            <div class="card">Saldo Atual: <span id="saldo-atual">R$ 0,00</span></div>
+        </div>
+
+        <div id="bloco-alertas" style="margin-top: 20px; padding: 15px; border: 1px solid #ccc;">
+            <h4>Status do Orçamento:</h4>
+            <p id="texto-insight">Nenhum limite definido ainda.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SmartCash. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
